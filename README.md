@@ -62,12 +62,15 @@ Due to the unlabelled nature of the dataset an unsupervised machine learning met
     <img src="/assets/sil.png" style="width: 75%; height: auto;">
     <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
 </figure>
+
+
 Therefore, using the elbow plot, Figure 2, and the silhouette score per cluster, Figure 3, a six cluster approach was selected.
 
 <figure>
     <img src="/assets/sil_vis.png" style="width: 75%; height: auto;">
     <figcaption>Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers</figcaption>
 </figure>
+
 
 When analysing the individual silhouette scores across each cluster in Figure 4, each cluster's silhouette score is larger than the average silhouette score. This suggests that the clusters are well separated and internally consistent.
 
@@ -77,6 +80,7 @@ However the overall silhouette score is low, indicating that the clusters overla
     <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
     <figcaption>Figure 5: Visualising the Clusters after Principal Component Analysis</figcaption>
 </figure>
+
 
 In an attempt to improve the quality of the clustering the categorical variables *gender* and *preferred_category* were removed, however there was no significant increase in the quality of the clustering. 
 
