@@ -53,12 +53,12 @@ Due to the unlabelled nature of the dataset an unsupervised machine learning met
 ### Results:
  As seen in Figure 2, there is no clear elbow however at k=6 there is a significant drop in fit time which corresponds to one of the highest silhouette scores in Figure 3. There is no steady increase in the silhouette score after k=6, the silhouette score fluctuates.
 
-<div style="display: flex; justify-content: space-around; align-items: center;">
-    <figure style="margin: 10px;">
+<div style="display: flex; justify-content: space-evenly; align-items: flex-start;">
+    <figure style="margin: 10px; text-align: center;">
         <img src="/assets/elbow.png" style="width: 300px;">
         <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
     </figure>
-    <figure style="margin: 10px;">
+    <figure style="margin: 10px; text-align: center;">
         <img src="/assets/sil.png" style="width: 300px;">
         <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
     </figure>
