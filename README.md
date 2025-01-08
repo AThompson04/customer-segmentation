@@ -49,6 +49,11 @@ Due to the unlabelled nature of the dataset an unsupervised machine learning met
 ## Results and Cluster Analysis
 ### Results:
 
+<figure>
+    <img src="/assets/elbow.png">
+    <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
+</figure>
+
 ![image](assets/elbow.png "Figure 2: Distortion Score Elbow for KMeans Clustering")
 ![image](assets/sil.png "Figure 3: Silhouette Score Analysis for Optimal K")
 ![image](assets/sil_vis.png "Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers")
