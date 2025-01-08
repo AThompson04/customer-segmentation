@@ -54,18 +54,18 @@ Due to the unlabelled nature of the dataset an unsupervised machine learning met
  As seen in Figure 2, there is no clear elbow however at k=6 there is a significant drop in fit time which corresponds to one of the highest silhouette scores in Figure 3. There is no steady increase in the silhouette score after k=6, the silhouette score fluctuates.
 
 <figure>
-    <img src="/assets/elbow.png" style="width: 50%; height: auto;">
+    <img src="/assets/elbow.png" style="width: 75%; height: auto;">
     <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
 </figure>
 
 <figure>
-    <img src="/assets/sil.png" style="width: 50%; height: auto;">
+    <img src="/assets/sil.png" style="width: 75%; height: auto;">
     <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
 </figure>
 Therefore, using the elbow plot, Figure 2, and the silhouette score per cluster, Figure 3, a six cluster approach was selected.
 
 <figure>
-    <img src="/assets/sil_vis.png">
+    <img src="/assets/sil_vis.png" style="width: 75%; height: auto;">
     <figcaption>Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers</figcaption>
 </figure>
 
@@ -74,7 +74,7 @@ When analysing the individual silhouette scores across each cluster in Figure 4,
 However the overall silhouette score is low, indicating that the clusters overlap this is evident when viewing the clusters using PCA in Figure 5.
 
 <figure>
-    <img src="/assets/pca_clusters.png">
+    <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
     <figcaption>Figure 5: Visualising the Clusters after Principal Component Analysis</figcaption>
 </figure>
 
