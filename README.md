@@ -19,7 +19,10 @@ To achieve this objective, it was further broken down into the following four te
 ## Main Insights
 From the exploratory data analysis, we found that:
 - The continuous variables, i.e. *age*, *income*, *spending_score*, *last_purchase_amount* and *purchase_frequency*, appear to be somewhat evenly distributed.
-![image](assets/cont_var_dist.png)
+<figure>
+    <img src="/assets/cont_var_dist.png">
+    <figcaption>Figure 1: Distribution of Continuous Variables</figcaption>
+</figure>
 - There are no strong relationships between any of the continuous variables mentioned previously. All correlations range between -0.06 and 0.06.
 - There are no strong relationships between the continuous variables mentioned above and the categorical variables, *gender* and *preferred_category*. However, there seems to be a slight tendency for males to purchase more frequently and that females last purchase amount tends to be lower than males or others. 
 
@@ -48,17 +51,46 @@ Due to the unlabelled nature of the dataset an unsupervised machine learning met
 
 ## Results and Cluster Analysis
 ### Results:
+ As seen in Figure 2, there is no clear elbow however at k=6 there is a significant drop in fit time which corresponds to one of the highest silhouette scores in Figure 3. There is no steady increase in the silhouette score after k=6, the silhouette score fluctuates.
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+    <figure style="margin: 10px;">
+        <img src="/assets/elbow.png" style="width: 300px;">
+        <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
+    </figure>
+    <figure style="margin: 10px;">
+        <img src="/assets/sil.png" style="width: 300px;">
+        <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
+    </figure>
+</div>
+
 
 <figure>
     <img src="/assets/elbow.png">
     <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
 </figure>
 
-![image](assets/elbow.png "Figure 2: Distortion Score Elbow for KMeans Clustering")
-![image](assets/sil.png "Figure 3: Silhouette Score Analysis for Optimal K")
-![image](assets/sil_vis.png "Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers")
+<figure>
+    <img src="/assets/sil.png">
+    <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
+</figure>
+Therefore, using the elbow plot, Figure 2, and the silhouette score per cluster, Figure 3, a six cluster approach was selected.
 
-- silhouette score was on the lower end indicating that the clusters overlapped, this is evident when you do a PCA analysis to analyse the results. Possible that the model would gave preformed better without the categorical data (Not much better) but then would lack more direction when determining a targeted marketing strategy - really only the preferred category not the gender.
+<figure>
+    <img src="/assets/sil_vis.png">
+    <figcaption>Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers</figcaption>
+</figure>
+
+When analysing the individual silhouette scores across each cluster in Figure 4, each cluster's silhouette score is larger than the average silhouette score. This suggests that the clusters are well separated and internally consistent.
+
+However the overall silhouette score is low, indicating that the clusters overlap this is evident when viewing the clusters using PCA in Figure 5.
+
+<figure>
+    <img src="/assets/pca_clusters.png">
+    <figcaption>Figure 5: Visualising the Clusters after Principal Component Analysis</figcaption>
+</figure>
+
+In an attempt to improve the quality of the clustering the categorical variables *gender* and *preferred_category* were removed, however there was no significant increase in the quality of the clustering. 
 
 ### Cluster Analysis:
 
