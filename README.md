@@ -21,7 +21,7 @@ To achieve this objective, it was further broken down into the following four te
 ## Main Insights
 From the exploratory data analysis, we found that:
 - The continuous variables, i.e. *age*, *income*, *spending_score*, *last_purchase_amount* and *purchase_frequency*, appear to be somewhat evenly distributed, see in Figure 1 below.
-<figure align='center'>
+<figure align="center">
     <img src="/assets/cont_var_dist.png">
     <figcaption>Figure 1: Distribution of Continuous Variables</figcaption>
 </figure>
