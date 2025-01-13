@@ -25,7 +25,7 @@ From the exploratory data analysis, we found that:
     <img src="/assets/cont_var_dist.png">
     <figcaption>Figure 1: Distribution of Continuous Variables</figcaption>
 </figure>
-\
+</br>
 - There are no strong relationships between any of the continuous variables mentioned previously. All correlations range between -0.06 and 0.06.
 - There are no strong relationships between the continuous variables mentioned above and the categorical variables, *gender* and *preferred_category*. However, there seems to be a slight tendency for males to purchase more frequently and that females last purchase amount tends to be lower than males or others. 
 
