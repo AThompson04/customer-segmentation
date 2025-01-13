@@ -81,16 +81,24 @@ The following methodology was used for all approaches:
 - To calculate silhouette scores for the different clusters a Gower dissimilarity matrix was used. The data used to calculated the dissimilarity were the numeric variables that had been normalised using *Sklearn*'s *StandardScaler* and the categorical variables that had been transformed using One-Hot Encoding.
 
 ### Model Selection:
-
+See the table below for a summary of how each clustering approach performed.
 
 | Approach | Clusters | Statistical Performance | Cluster Analysis |
-| :--------------: | :--------------: | :--------------: | :--------------: |
+| -------------- | -------------- | -------------- | -------------- |
 | K-Means | Six | There was no distinct elbow in the scree plot, and the range of clusters had low silhouette scores that varied between 0.098 and 0.108. When visualising the clusters in 3D, there were six clear cluster all grouped together with some overlap. | The clusters were well separated between all categories. |
 | LLM and K-Means | Five | There was a distinct elbow at k=5 in the distortion scree plot, and silhouette scores were varied between 0.238 and 0.536, with cluster five having the highest silhouette score. When visualising the clusters in 3D, there were five distinct, tight and separate clusters. | The clusters were not well separated - each cluster appeared to have a similar distribution of all continuous variables and no distinguishable characteristics for the cluster.   |
 | LLM and K-Means Hybrid | Five | There was a distinct elbow at k=5 in the distortion scree plot, and silhouette scores were varied between 0.313 and 0.656, with cluster five having the highest silhouette score. When visualising the clusters in 3D, there were five distinct and separate clusters. | The clusters were not well separated - each cluster appeared to have a similar distribution of all continuous variables. The only distinguishable feature of each cluster was the preferred category - each cluster was made up of entirely one category. |
 | K-Prototypes | Five | There was no distinct elbow in the scree plot, and the range of clusters had low silhouette scores that varied between 0.056 and 0.081. When visualising the clusters in 3D, there were five clear cluster all grouped together with overlap. | There was good separation of categories between clusters. |
 
-**K-means clustering was selected as it is used to group data into groups based on the similarity of the data points, ability to handle large datasets quickly and its computational efficiency.**
+
+Based on the information in the table above and additional information in the notebooks, the K-Means approach was selected. Even though the K-Means approach preformed statistically poorer than the LLM K-Means and the hybrid LLM K-Means approach because:
+- The K-Means approach's silhouette score was much lower indicating the quality of the cluster was worse.
+- The 3D visualisation of the LLM K-Means and the hybrid LLM K-Means had distinct, separate and tight cluster.
+The quality of information that was provided by the cluster was poor, meaning that there were no distinguishable features in the clusters. This indicates that the relationships between the variables could have been lost during the embedding process and no meaningful clusters for the business were identified but rather latent relationships were identified and clustered.
+
+The K-Means and the K-Prototype approach preformed statistically similarly, with the K-Prototypes approach having slightly lower silhouette scores. However, this was not the deciding factor when selecting the K-Means approach. The K-Means approach was selected based on the information the clustering provided, it separated the gender, age and income into more distinct categories.
+
+In summary, the K-Means approach was selected even though it did not outperform the other approaches statistically but rather offered meaningful customer segments which can be used when creating targeted marketing strategies. The approaches that statistically better than the chosen approach did not produce meaningful cluster but were rather clustered based on latent relationships and would therefore not be of use to the marketing team.
 
 ## Results and Cluster Analysis
 ### Results:
