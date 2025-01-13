@@ -65,22 +65,30 @@ The following methodology was used for all approaches:
 - Preform cluster analysis on the original data using the computed cluster labels. 
 
 #### Additional Methodology for the Different Clustering Approaches:
-#### 1. LLM and K-Means:
+##### 1. LLM and K-Means:
 - The original data is converted into text after combining all variables for each customer, creating a 'customer profile'.
 - The text is embedding using *sentence_transformers*'s *SentenceTransformer* function with the *paraphrase-MiniLM-L6-v2* model. The embeddings were normalised by the *SentenceTransformer* function.
 - The embedded data was used for the scree plot, silhouette scores, PCA and clustering using *Sklearn*'s *KMeans* function.
 
-#### 2. A Hybrid approach to LLM and K-Means:
+##### 2. A Hybrid approach to LLM and K-Means:
 - The hybrid approach involved embedding the categorical variables, *gender* and *preferred_category*, using the same method as the LLM and K-Means approach. The numeric data however was not covered into text, it was rather normalised using *Sklearn*'s *StandardScaler* function.
 - The embeddings of the categorical data and the normalised numeric data were used for the scree plot, silhouette scores, PCA and clustering using *Sklearn*'s *KMeans* function.
 
-#### 3. K-Prototypes:
+##### 3. K-Prototypes:
 - The categorical variable's data types were changed from *object* to *category* so that the data would be compatible with *kmodes*'s *KPrototypes* clustering function.
 - The numeric variables' were normalised using the *Sklearn*'s *StandardScaler* function.
-- The combined data were used for the scree plot, silhouette scores, PCA and clustering using *kmodes*'s *KPrototype* function.
+- The combined data were used for the scree plot, PCA and clustering using *kmodes*'s *KPrototype* function.
+- To calculate silhouette scores for the different clusters a Gower dissimilarity matrix was used. The data used to calculated the dissimilarity were the numeric variables that had been normalised using *Sklearn*'s *StandardScaler* and the categorical variables that had been transformed using One-Hot Encoding.
 
 ### Model Selection:
 
+
+| Approach | Clusters | Statistical Performance | Cluster Analysis |
+| :--------------: | :--------------: | :--------------: | :--------------: |
+| K-Means | Six | There was no distinct elbow in the scree plot, and the range of clusters had low silhouette scores that varied between 0.098 and 0.108. When visualising the clusters in 3D, there were six clear cluster all grouped together with some overlap. | The clusters were well separated between all categories. |
+| LLM and K-Means | Five | There was a distinct elbow at k=5 in the distortion scree plot, and silhouette scores were varied between 0.238 and 0.536, with cluster five having the highest silhouette score. When visualising the clusters in 3D, there were five distinct, tight and separate clusters. | The clusters were not well separated - each cluster appeared to have a similar distribution of all continuous variables and no distinguishable characteristics for the cluster.   |
+| LLM and K-Means Hybrid | Five | There was a distinct elbow at k=5 in the distortion scree plot, and silhouette scores were varied between 0.313 and 0.656, with cluster five having the highest silhouette score. When visualising the clusters in 3D, there were five distinct and separate clusters. | The clusters were not well separated - each cluster appeared to have a similar distribution of all continuous variables. The only distinguishable feature of each cluster was the preferred category - each cluster was made up of entirely one category. |
+| K-Prototypes | Five | There was no distinct elbow in the scree plot, and the range of clusters had low silhouette scores that varied between 0.056 and 0.081. When visualising the clusters in 3D, there were five clear cluster all grouped together with overlap. | There was good separation of categories between clusters. |
 
 **K-means clustering was selected as it is used to group data into groups based on the similarity of the data points, ability to handle large datasets quickly and its computational efficiency.**
 
@@ -92,12 +100,15 @@ The following methodology was used for all approaches:
     <img src="/assets/elbow.png" style="width: 75%; height: auto;">
     <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
 </figure>
+</br>
+</br>
 
 <figure>
     <img src="/assets/sil.png" style="width: 75%; height: auto;">
     <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
 </figure>
-<br>
+</br>
+</br>
 
 Therefore, using the elbow plot, Figure 2, and the silhouette score per cluster, Figure 3, a six cluster approach was selected.
 
@@ -105,7 +116,8 @@ Therefore, using the elbow plot, Figure 2, and the silhouette score per cluster,
     <img src="/assets/sil_vis.png" style="width: 75%; height: auto;">
     <figcaption>Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers</figcaption>
 </figure>
-<br>
+</br>
+</br>
 
 When analysing the individual silhouette scores across each cluster in Figure 4, each cluster's silhouette score is larger than the average silhouette score. This suggests that the clusters are well separated and internally consistent.
 
@@ -115,7 +127,8 @@ However the overall silhouette score is low, indicating that the clusters overla
     <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
     <figcaption>Figure 5: Visualising the Clusters after Principal Component Analysis</figcaption>
 </figure>
-<br>
+</br>
+</br>
 
 In an attempt to improve the quality of the clustering the categorical variables *gender* and *preferred_category* were removed, however there was no significant increase in the quality of the clustering. 
 
