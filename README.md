@@ -6,14 +6,16 @@ The dataset for this project can be found on [Kaggle](https://www.kaggle.com/dat
 The dataset consists of simulated customer data, containing demographic and behavioural information for 1 000 customer records. 
 The data is unlabelled, therefore unsupervised machine learning methods will be used to discover patterns and relationships in the data.
 
+The dataset is mixed - it is made up of numeric and nominal categorical variables.
+
 ## Objectives
 The main objective of this project is:
 > To identify different customer segments based on the customer's demographic and behavioural information. The customer segments can the be used to develop targeted marketing strategies for each segment
 
 To achieve this objective, it was further broken down into the following four technical sub-objectives:
-1. To perform an exploratory data analysis.
-2. Data cleaning.
-3. To use an unsupervised machine learning method, K-means, to group that customers into different segments based on their demographic and behavioural information.
+1. Perform an exploratory data analysis.
+2. Perform data cleaning.
+3. Determine which unsupervised machine learning method should be used to group the customers into different segments based on their demographic and behavioural information.
 4. Provide summaries for each customer segment to assist in developing targeted marketing strategies.
 
 ## Main Insights
@@ -29,25 +31,55 @@ From the exploratory data analysis, we found that:
 ## Data Cleaning and Engineered Features
 The following steps were taken to prepare the data for model selection:
 - The dataset was checked for any missed values and duplicated customer data. No missing values or duplicate values were found.
-- The continuous variables were normalised using Sklearn's StandardScaler function. The Standard Scaler function uses z-score normalisation by transforming the data has a mean of zero and standard deviation of one.
-- The StandardScaler instance was saved to be used to convert the normalised data back to its original form after cluster has occurred to provide useful insight about each cluster.
-- The categorical variables *gender* and *preferred_category* were transformed into categorical data using One-Hot Encoding.
+- The continuous variables were normalised using *Sklearn*'s *StandardScaler* function. The Standard Scaler function uses z-score normalisation by transforming the data has a mean of zero and standard deviation of one.
+- The nominal categorical variables *gender* and *preferred_category* were transformed using One-Hot Encoding.
+
+In addition to the cleaned dataset which was used for the K-Means approach, the original data was used for the following clustering methods:
+1. LLM and K-Means
+2. Hybrid approach to LLM and K-Means
+3. K-Prototypes
+Any normalisation for the for the previously mentioned approaches was done using *Sklearn*'s *StandardScaler* function.
 
 ## Model Selection and Methodology
-### Model Selection:
-Due to the unlabelled nature of the dataset an unsupervised machine learning method was selected to group the data points based on patterns and relationships found in the data. K-means clustering was selected as it is used to group data into groups based on the similarity of the data points, ability to handle large datasets quickly and its computational efficiency.
+Due to the unlabelled nature of the dataset an unsupervised machine learning method was selected to group the data points based on patterns and relationships found in the data. Different clustering methods were explored to determine which provided the most meaningful customer segmentation.
+
+The following clustering methods were explored:
+1. K-Means
+2. LLM and K-Means
+3. A Hybrid approach to LLM and K-Means
+4. K-Prototypes 
 
 ### Methodology:
+The following methodology was used for all approaches:
 - The whole dataset was used to model the data, as there was no need to create a train-test split for K-means clustering.
-- To determine the number of clusters the following was done:
-  - All instances of Sklearn.cluster's KMeans used the random state 42.
-  - The distortion score, silhouette score and the fit time were calculated for each instance of KMeans for the different values of k i.e. number of clusters.
-  - The values of k tested were two to twelve.
-  - An elbow plot with distortion score and fit time, and a line graph for silhouette scores for the values of k were created.
-  - The value of k at the elbow of elbow plot with a higher silhouette score would be used for the analysis, only if the silhouette score is less than the silhouetted coefficient value of each cluster for the specific k value.
-- Once the number of cluster has been chosen, the data will be sorted into clusters using Sklearn.cluster's KMeans function.
-- A principal component analysis using two components will be preformed so that the clustering can be analysed visually using a scatterplot.
-- All normalised data will be transformed to its original scale, so meaningful cluster analysis can be done.
+- The optimum number of clusters was determined by:
+  - Finding the elbow or determine the most optimal number of clusters using the distortion score scree plot.
+  - Calculating the silhouette score for a range of different clusters.
+  - If there was no clear decision as to the optimal number of clusters in the scree plot, there was no elbow, and there is quite small fluctuation with the clusters' silhouette scores. Then consider using silhouette plots for a range of different clusters. The aim would be to find the smallest cluster size where all individual cluster's silhouette coefficient values are larger than the average silhouette score to avoid poorly separated clusters and incorrectly classified data, and that there is no imbalance in cluster size.
+  - Analysing the silhouette plot for the chosen number of clusters to ensure that each cluster silhouette score is larger than the average silhouette score, there are not many or any incorrectly classified data points and that the cluster sizes appear balanced.
+- Cluster the data using the chosen clustering approach using random state 42.
+- Preform a principal component analysis using three principal components. Plot 2D and 3D scatterplots coloured by cluster to visualise the clustering quality.
+- Preform cluster analysis on the original data using the computed cluster labels. 
+
+#### Additional Methodology for the Different Clustering Approaches:
+#### 1. LLM and K-Means:
+- The original data is converted into text after combining all variables for each customer, creating a 'customer profile'.
+- The text is embedding using *sentence_transformers*'s *SentenceTransformer* function with the *paraphrase-MiniLM-L6-v2* model. The embeddings were normalised by the *SentenceTransformer* function.
+- The embedded data was used for the scree plot, silhouette scores, PCA and clustering using *Sklearn*'s *KMeans* function.
+
+#### 2. A Hybrid approach to LLM and K-Means:
+- The hybrid approach involved embedding the categorical variables, *gender* and *preferred_category*, using the same method as the LLM and K-Means approach. The numeric data however was not covered into text, it was rather normalised using *Sklearn*'s *StandardScaler* function.
+- The embeddings of the categorical data and the normalised numeric data were used for the scree plot, silhouette scores, PCA and clustering using *Sklearn*'s *KMeans* function.
+
+#### 3. K-Prototypes:
+- The categorical variable's data types were changed from *object* to *category* so that the data would be compatible with *kmodes*'s *KPrototypes* clustering function.
+- The numeric variables' were normalised using the *Sklearn*'s *StandardScaler* function.
+- The combined data were used for the scree plot, silhouette scores, PCA and clustering using *kmodes*'s *KPrototype* function.
+
+### Model Selection:
+
+
+**K-means clustering was selected as it is used to group data into groups based on the similarity of the data points, ability to handle large datasets quickly and its computational efficiency.**
 
 ## Results and Cluster Analysis
 ### Results:
