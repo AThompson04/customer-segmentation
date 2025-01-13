@@ -20,11 +20,12 @@ To achieve this objective, it was further broken down into the following four te
 
 ## Main Insights
 From the exploratory data analysis, we found that:
-- The continuous variables, i.e. *age*, *income*, *spending_score*, *last_purchase_amount* and *purchase_frequency*, appear to be somewhat evenly distributed.
+- The continuous variables, i.e. *age*, *income*, *spending_score*, *last_purchase_amount* and *purchase_frequency*, appear to be somewhat evenly distributed, see in Figure 1 below.
 <figure>
     <img src="/assets/cont_var_dist.png">
     <figcaption>Figure 1: Distribution of Continuous Variables</figcaption>
 </figure>
+\
 - There are no strong relationships between any of the continuous variables mentioned previously. All correlations range between -0.06 and 0.06.
 - There are no strong relationships between the continuous variables mentioned above and the categorical variables, *gender* and *preferred_category*. However, there seems to be a slight tendency for males to purchase more frequently and that females last purchase amount tends to be lower than males or others. 
 
