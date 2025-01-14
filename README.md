@@ -162,81 +162,129 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 ### Cluster Analysis:
 #### Cluster 1:
 **Average Age:** 33
+
 **Gender:** Female
+
 **Average Income:** $77 992
+
 **Average Spending Score:** 76
+
 **Average Membership Years:** 5.8
+
 **Average Purchase Frequency:** 26
+
 **Preferred Category:** Electronics
+
 **Average Last Purchase Amount:** $234
+
 **Recommendations:** Focus on electronics and Home & Garden products tailored for this segment, focus on new products and implement loyalty programs. 
 
 #### Cluster 2:
 **Average Age:** 46
+
 **Gender:** Male
+
 **Average Income:** $68 704
+
 **Average Spending Score:** 23
+
 **Average Membership Years:** 7.5
+
 **Average Purchase Frequency:** 27
+
 **Preferred Category:** Sports
+
 **Average Last Purchase Amount:** $337
+
 **Recommendations:** Emphasise sports & fitness products and electronics tailored for this sector, and promote sporting events selling these products.
 
 #### Cluster 3:
-*Average Age:** 54
+**Average Age:** 54
+
 **Gender:** Other
+
 **Average Income:** $58 868
+
 **Average Spending Score:** 60
+
 **Average Membership Years:** 4.1
+
 **Average Purchase Frequency:** 27
+
 **Preferred Category:** Sports
+
 **Average Last Purchase Amount:** $743
+
 **Recommendations:** Focus on sport & fitness products, increase personalised recommendations, and implement loyalty programs.
 
 #### Cluster 4:
 **Average Age:** 30
+
 **Gender:** Male
+
 **Average Income:** $ 99 447
+
 **Average Spending Score:** 33
+
 **Average Membership Years:** 3.4
+
 **Average Purchase Frequency:** 24
+
 **Preferred Category:** Electronics
+
 **Average Last Purchase Amount:** $630
+
 **Recommendations:** Focus on electronic products tailored to this segment, offer personalised recommendations, and strategies on how to increase customer loyalty and purchase frequency.
 
 #### Cluster 5:
 **Average Age:** 57
+
 **Gender:** Male
+
 **Average Income:** $122 383
+
 **Average Spending Score:** 53
+
 **Average Membership Years:** 3.9
+
 **Average Purchase Frequency:** 22
+
 **Preferred Category:** Sports
+
 **Average Last Purchase Amount:** $314
+
 **Recommendations:** Emphasise sports & fitness products and electronics tailored to this segment, promote sporting events, and introduce subscription services.
 
 #### Cluster 6:
 **Average Age:** 45
+
 **Gender:** Other
+
 **Average Income:** $109 792
+
 **Average Spending Score:** 62
+
 **Average Membership Years:** 8.5
+
 **Average Purchase Frequency:** 34
+
 **Preferred Category:** Groceries
+
 **Average Last Purchase Amount:** $715
+
 **Recommendations:** Focus on groceries, implement loyalty programs based on membership years and purchase frequency, offer personalised recommendations and promote newer products.
 
 See a more detailed breakdown of the categorical and continuous variable distribution amongst clusters in Figure 7 and 8 below.
 
 <figure>
-    <img src="/assets/cluster_cont.png" style="width: 75%; height: auto;">
+    <img src="/assets/cluster_cont.png" style="width: 100%; height: auto;">
     <figcaption>Figure 7: Distribution of Continuous Variables per Cluster</figcaption>
 </figure>
 </br>
 </br>
 
 <figure>
-    <img src="/assets/cluster_cat_breakdown.png" style="width: 75%; height: auto;">
+    <img src="/assets/cluster_cat_breakdown.png" style="width: 100%; height: auto;">
     <figcaption>Figure 8: Distribution of Categorical Variables per Cluster</figcaption>
 </figure>
 </br>
