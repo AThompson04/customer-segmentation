@@ -178,7 +178,8 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 **Average Last Purchase Amount:** $234
 
 **Recommendations:** Focus on electronics and Home & Garden products tailored for this segment, focus on new products and implement loyalty programs. 
-
+</br>
+</br>
 
 #### Cluster 2:
 **Average Age:** 46
@@ -198,7 +199,8 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 **Average Last Purchase Amount:** $337
 
 **Recommendations:** Emphasise sports & fitness products and electronics tailored for this sector, and promote sporting events selling these products.
-
+</br>
+</br>
 
 #### Cluster 3:
 **Average Age:** 54
@@ -218,7 +220,8 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 **Average Last Purchase Amount:** $743
 
 **Recommendations:** Focus on sport & fitness products, increase personalised recommendations, and implement loyalty programs.
-
+</br>
+</br>
 
 #### Cluster 4:
 **Average Age:** 30
@@ -238,7 +241,8 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 **Average Last Purchase Amount:** $630
 
 **Recommendations:** Focus on electronic products tailored to this segment, offer personalised recommendations, and strategies on how to increase customer loyalty and purchase frequency.
-
+</br>
+</br>
 
 #### Cluster 5:
 **Average Age:** 57
@@ -258,7 +262,8 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 **Average Last Purchase Amount:** $314
 
 **Recommendations:** Emphasise sports & fitness products and electronics tailored to this segment, promote sporting events, and introduce subscription services.
-
+</br>
+</br>
 
 #### Cluster 6:
 **Average Age:** 45
@@ -278,7 +283,8 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 **Average Last Purchase Amount:** $715
 
 **Recommendations:** Focus on groceries, implement loyalty programs based on membership years and purchase frequency, offer personalised recommendations and promote newer products.
-
+</br>
+</br>
 
 See a more detailed breakdown of the categorical and continuous variable distribution amongst clusters in Figure 7 and 8 below.
 
