@@ -140,8 +140,8 @@ However the overall silhouette score is low indicating that the clusters overlap
 
 The separation of the clusters can be visualised more clearly in Figure 6.
 <p align="center">
-  <img src="/assets/pca3.png" alt="Figure 6" style="width: 50%; margin-right: 0%;">
-  <img src="/assets/pca3_1.png" alt="Figure 7" style="width: 50%; margin-left: 0%;">
+  <img src="/assets/pca3.png" alt="Figure 6" style="width: 75%; margin-right: 0%;">
+  <img src="/assets/pca3_1.png" alt="Figure 7" style="width: 75%; margin-left: 0%;">
 </p>
 
 <p align="center">
@@ -149,4 +149,85 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 </p>
 
 ### Cluster Analysis:
+#### Cluster 1:
+*Average Age:* 33
+*Gender:* Female
+*Average Income:* $77 992
+*Average Spending Score:* 76
+*Average Membership Years:* 5.8
+*Average Purchase Frequency:* 26
+*Preferred Category:* Electronics
+*Average Last Purchase Amount:* $234
+*Recommendations:*
+
+#### Cluster 2:
+*Average Age:* 46
+*Gender:* Male
+*Average Income:* 
+*Average Spending Score:* 
+*Average Membership Years:*
+*Average Purchase Frequency:*
+*Preferred Category:*
+*Average Last Purchase Amount:*
+*Recommendations:*
+
+#### Cluster 3:
+*Average Age:* 54
+*Gender:* Other
+*Average Income:* 
+*Average Spending Score:* 
+*Average Membership Years:*
+*Average Purchase Frequency:*
+*Preferred Category:*
+*Average Last Purchase Amount:*
+*Recommendations:*
+
+#### Cluster 4:
+*Average Age:* 30
+*Gender:* Male
+*Average Income:* 
+*Average Spending Score:* 
+*Average Membership Years:*
+*Average Purchase Frequency:*
+*Preferred Category:*
+*Average Last Purchase Amount:*
+*Recommendations:*
+
+#### Cluster 5:
+*Average Age:* 57
+*Gender:* Male
+*Average Income:* 
+*Average Spending Score:* 
+*Average Membership Years:*
+*Average Purchase Frequency:*
+*Preferred Category:*
+*Average Last Purchase Amount:*
+*Recommendations:*
+
+#### Cluster 6:
+*Average Age:* 45
+*Gender:* Other
+*Average Income:* 
+*Average Spending Score:* 
+*Average Membership Years:*
+*Average Purchase Frequency:*
+*Preferred Category:*
+*Average Last Purchase Amount:*
+*Recommendations:*
+
+See a more detailed breakdown of the categorical and continuous variable distribution amongst clusters in Figure 7 and 8 below.
+
+<figure>
+    <img src="/assets/cluster_cont.png" style="width: 75%; height: auto;">
+    <figcaption>Figure 7: Distribution of Continuous Variables per Cluster</figcaption>
+</figure>
+</br>
+</br>
+
+<figure>
+    <img src="/assets/cluster_cat_breakdown.png" style="width: 75%; height: auto;">
+    <figcaption>Figure 8: Distribution of Categorical Variables per Cluster</figcaption>
+</figure>
+</br>
+</br>
 
