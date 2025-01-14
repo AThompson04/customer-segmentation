@@ -140,25 +140,23 @@ However the overall silhouette score is low, indicating that the clusters overla
 
 The separation of the clusters can be visualised more clearly in Figure 6.
 <figure>
-    <iframe src="/assets/interactive_plot.html" style="width: 75%; height: auto;" frameborder="0"></iframe>
+    <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
     <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
 </figure>
 </br>
 </br>
 
-<section>
-    <h2>Cluster Visualisation</h2>
-    <p>Below is the visualisation of the clusters using three principal components.</p>
-    
-    <figure>
-        <iframe src="/assets/interactive_plot.html" style="width: 75%; height: 400px;" frameborder="0"></iframe>
-        <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
-    </figure>
-    
-    <br><br>
-    
-    <p>Further analysis can be performed by...</p>
-</section>
+<p align="center">
+  <img src="/assets/pca3.png" alt="Figure 6" style="width: 45%; margin-right: 5%;">
+  <img src="/assets/pca3_1.png" alt="Figure 7" style="width: 45%; margin-left: 5%;">
+</p>
+
+<p align="center">
+  <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
+  <figcaption>Figure 7: Visualising the Clusters using Three Principal Components</figcaption>
+</p>
+
+
 
 ### Cluster Analysis:
 
