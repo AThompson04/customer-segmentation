@@ -129,7 +129,7 @@ Therefore, using the elbow plot, Figure 2, and the silhouette score per cluster,
 
 When analysing the individual silhouette scores across each cluster in Figure 4, each cluster's silhouette score is larger than the average silhouette score. This suggests that the clusters are well separated and internally consistent.
 
-However the overall silhouette score is low, indicating that the clusters overlap this is evident when viewing the clusters using PCA in Figure 5.
+However the overall silhouette score is low indicating that the clusters overlap, this is evident when viewing the clusters using PCA in Figure 5.
 
 <figure>
     <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
@@ -139,24 +139,14 @@ However the overall silhouette score is low, indicating that the clusters overla
 </br>
 
 The separation of the clusters can be visualised more clearly in Figure 6.
-<figure>
-    <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
-    <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
-</figure>
-</br>
-</br>
-
 <p align="center">
-  <img src="/assets/pca3.png" alt="Figure 6" style="width: 45%; margin-right: 5%;">
-  <img src="/assets/pca3_1.png" alt="Figure 7" style="width: 45%; margin-left: 5%;">
+  <img src="/assets/pca3.png" alt="Figure 6" style="width: 50%; margin-right: 0%;">
+  <img src="/assets/pca3_1.png" alt="Figure 7" style="width: 50%; margin-left: 0%;">
 </p>
 
 <p align="center">
   <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
-  <figcaption>Figure 7: Visualising the Clusters using Three Principal Components</figcaption>
 </p>
-
-
 
 ### Cluster Analysis:
 
