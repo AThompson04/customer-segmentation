@@ -140,7 +140,7 @@ However the overall silhouette score is low, indicating that the clusters overla
 
 The separation of the clusters can be visualised more clearly in Figure 6.
 <figure>
-    <img src="/assets/interactive_plot.html" style="width: 75%; height: auto;">
+    <iframe src="/assets/interactive_plot.html" style="width: 75%; height: auto;" frameborder="0"></iframe>
     <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
 </figure>
 </br>
