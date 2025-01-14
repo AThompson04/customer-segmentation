@@ -84,7 +84,7 @@ The following methodology was used for all approaches:
 See the table below for a summary of how each clustering approach performed.
 
 | Approach | Clusters | Statistical Performance | Cluster Analysis |
-| -------------- | -------------- | -------------- | -------------- |
+| :-------------- | :-------------- | :-------------- | :-------------- |
 | K-Means | Six | There was no distinct elbow in the scree plot, and the range of clusters had low silhouette scores that varied between 0.098 and 0.108. When visualising the clusters in 3D, there were six clear cluster all grouped together with some overlap. | The clusters were well separated between all categories. |
 | LLM and K-Means | Five | There was a distinct elbow at k=5 in the distortion scree plot, and silhouette scores were varied between 0.238 and 0.536, with cluster five having the highest silhouette score. When visualising the clusters in 3D, there were five distinct, tight and separate clusters. | The clusters were not well separated - each cluster appeared to have a similar distribution of all continuous variables and no distinguishable characteristics for the cluster.   |
 | LLM and K-Means Hybrid | Five | There was a distinct elbow at k=5 in the distortion scree plot, and silhouette scores were varied between 0.313 and 0.656, with cluster five having the highest silhouette score. When visualising the clusters in 3D, there were five distinct and separate clusters. | The clusters were not well separated - each cluster appeared to have a similar distribution of all continuous variables. The only distinguishable feature of each cluster was the preferred category - each cluster was made up of entirely one category. |
@@ -133,12 +133,18 @@ However the overall silhouette score is low, indicating that the clusters overla
 
 <figure>
     <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
-    <figcaption>Figure 5: Visualising the Clusters after Principal Component Analysis</figcaption>
+    <figcaption>Figure 5: Visualising the Clusters using Two Principal Components</figcaption>
 </figure>
 </br>
 </br>
 
-In an attempt to improve the quality of the clustering the categorical variables *gender* and *preferred_category* were removed, however there was no significant increase in the quality of the clustering. 
+The separation of the clusters can be visualised more clearly in Figure 6.
+<figure>
+    <img src="/assets/interactive_plot.html" style="width: 75%; height: auto;">
+    <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
+</figure>
+</br>
+</br>
 
 ### Cluster Analysis:
 
