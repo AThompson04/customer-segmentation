@@ -149,14 +149,14 @@ However the overall silhouette score is low indicating that the clusters overlap
 </br>
 </br>
 
-The separation of the clusters can be visualised more clearly in Figure 6.
+The separation of the clusters can be visualised more clearly in [Figure 6](assets/interactive_plot.html).
 <p align="center">
   <img src="/assets/pca3.png" alt="Figure 6" style="width: 75%; margin-right: 0%;">
   <img src="/assets/pca3_1.png" alt="Figure 7" style="width: 75%; margin-left: 0%;">
 </p>
 
 <p align="center">
-  <figcaption>[Figure 6:](assets/interactive_plot.html) Visualising the Clusters using Three Principal Components</figcaption>
+  <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
 </p>
 
 ### Cluster Analysis:
