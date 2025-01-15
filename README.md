@@ -156,7 +156,7 @@ The separation of the clusters can be visualised more clearly in Figure 6.
 </p>
 
 <p align="center">
-  <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
+  <figcaption>[Figure 6:](assets/interactive_plot.html) Visualising the Clusters using Three Principal Components</figcaption>
 </p>
 
 ### Cluster Analysis:
