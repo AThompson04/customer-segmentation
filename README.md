@@ -30,10 +30,7 @@ To achieve this objective, it was further broken down into the following four te
 ## Main Insights
 From the exploratory data analysis, we found that:
 - The continuous variables, i.e. *age*, *income*, *spending_score*, *last_purchase_amount* and *purchase_frequency*, appear to be somewhat evenly distributed, see in Figure 1 below.
-<figure align="center">
-    <img src="/assets/cont_var_dist.png">
-    <figcaption>Figure 1: Distribution of Continuous Variables</figcaption>
-</figure>
+<figure><p align="center"><img src="/assets/cont_var_dist.png"><br><figcaption>Figure 1: Distribution of Continuous Variables</figcaption></p></figure>
 </br>
 </br>
 
@@ -105,7 +102,7 @@ Based on the information in the table above and additional information in the no
 - The K-Means approach's silhouette score was much lower indicating the quality of the cluster was worse.
 - The 3D visualisation of the LLM K-Means and the hybrid LLM K-Means had distinct, separate and tight cluster.
 
-The quality of information that was provided by the cluster was poor, meaning that there were no distinguishable features in the clusters. This indicated that the relationships between the variables could have been lost during the embedding process and no meaningful clusters for creating marketing strategies were identified but rather latent relationships were identified and clustered.
+The quality of information that was provided by each cluster was poor, meaning that there were no distinguishable features in the clusters. This indicated that the relationships between the variables could have been lost during the embedding process and no meaningful clusters for creating marketing strategies were identified but rather latent relationships were identified and clustered.
 
 The K-Means and the K-Prototype approach preformed statistically similarly, with the K-Prototypes approach having slightly lower silhouette scores. However, this was not the deciding factor when selecting the K-Means approach. The K-Means approach was selected based on the information the clustering provided, it separated gender, age and income into more distinct categories.
 
@@ -116,15 +113,15 @@ In summary, the K-Means approach was selected even though it did not outperform 
 As seen in Figure 2, there is no clear elbow however at k=6 there is a significant drop in fit time which corresponds to one of the highest silhouette scores in Figure 3. In Figure 3 there is no steady increase in the silhouette score after k=6, the silhouette score fluctuates.
 
 <figure>
-    <img src="/assets/elbow.png" style="width: 75%; height: auto;">
-    <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
+    <p align="center"><img src="/assets/elbow.png" style="width: 75%; height: auto;"></p>
+    <figcaption>*Figure 2: Distortion Score Elbow for KMeans Clustering*</figcaption>
 </figure>
 </br>
 </br>
 
 <figure>
-    <img src="/assets/sil.png" style="width: 75%; height: auto;">
-    <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
+    <p align="center"><img src="/assets/sil.png" style="width: 75%; height: auto;"></p>
+    <figcaption>*Figure 3: Silhouette Score Analysis for Optimal K*</figcaption>
 </figure>
 </br>
 </br>
@@ -132,8 +129,8 @@ As seen in Figure 2, there is no clear elbow however at k=6 there is a significa
 Therefore, using the scree plot, Figure 2, and the silhouette score per cluster, Figure 3, a six cluster approach was selected.
 
 <figure>
-    <img src="/assets/sil_vis.png" style="width: 75%; height: auto;">
-    <figcaption>Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers</figcaption>
+    <p align="center"><img src="/assets/sil_vis.png" style="width: 75%; height: auto;"><p/>
+    <figcaption>*Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers*</figcaption>
 </figure>
 </br>
 </br>
@@ -143,8 +140,8 @@ When analysing the individual silhouette scores across each cluster in Figure 4,
 However the overall silhouette score is low indicating that the clusters overlap or are close together, this is evident when viewing the clusters using PCA in Figure 5 and 6.
 
 <figure>
-    <img src="/assets/pca_clusters.png" style="width: 75%; height: auto;">
-    <figcaption>Figure 5: Visualising the Clusters using Two Principal Components</figcaption>
+    <p align="center"><img src="/assets/pca_clusters.png" style="width: 75%; height: auto;"></p>
+    <figcaption>*Figure 5: Visualising the Clusters using Two Principal Components*</figcaption>
 </figure>
 </br>
 </br>
@@ -156,7 +153,7 @@ The separation of the clusters can be visualised more clearly in [Figure 6](asse
 </p>
 
 <p align="center">
-  <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
+  <figcaption>*Figure 6: Visualising the Clusters using Three Principal Components*</figcaption>
 </p>
 
 ### Cluster Analysis:
@@ -289,15 +286,15 @@ The separation of the clusters can be visualised more clearly in [Figure 6](asse
 See a more detailed breakdown of the categorical and continuous variable distribution amongst clusters in Figure 7 and 8 below.
 
 <figure>
-    <img src="/assets/cluster_cont.png" style="width: 100%; height: auto;">
-    <figcaption>Figure 7: Distribution of Continuous Variables per Cluster</figcaption>
+    <p align="center"><img src="/assets/cluster_cont.png" style="width: 100%; height: auto;"></p>
+    <figcaption>*Figure 7: Distribution of Continuous Variables per Cluster*</figcaption>
 </figure>
 </br>
 </br>
 
 <figure>
-    <img src="/assets/cluster_cat_breakdown.png" style="width: 100%; height: auto;">
-    <figcaption>Figure 8: Distribution of Categorical Variables per Cluster</figcaption>
+    <p align="center"><img src="/assets/cluster_cat_breakdown.png" style="width: 100%; height: auto;"></p>
+    <figcaption>*Figure 8: Distribution of Categorical Variables per Cluster*</figcaption>
 </figure>
 </br>
 </br>
