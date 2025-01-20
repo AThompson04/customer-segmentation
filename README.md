@@ -114,14 +114,14 @@ As seen in Figure 2, there is no clear elbow however at k=6 there is a significa
 
 <figure>
     <p align="center"><img src="/assets/elbow.png" style="width: 75%; height: auto;"></p>
-    <figcaption>*Figure 2: Distortion Score Elbow for KMeans Clustering*</figcaption>
+    <figcaption>Figure 2: Distortion Score Elbow for KMeans Clustering</figcaption>
 </figure>
 </br>
 </br>
 
 <figure>
     <p align="center"><img src="/assets/sil.png" style="width: 75%; height: auto;"></p>
-    <figcaption>*Figure 3: Silhouette Score Analysis for Optimal K*</figcaption>
+    <figcaption>Figure 3: Silhouette Score Analysis for Optimal K</figcaption>
 </figure>
 </br>
 </br>
@@ -130,7 +130,7 @@ Therefore, using the scree plot, Figure 2, and the silhouette score per cluster,
 
 <figure>
     <p align="center"><img src="/assets/sil_vis.png" style="width: 75%; height: auto;"><p/>
-    <figcaption>*Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers*</figcaption>
+    <figcaption>Figure 4: Silhouette Plot of KMeans Clustering for 1000 Samples in 6 Centers</figcaption>
 </figure>
 </br>
 </br>
@@ -141,7 +141,7 @@ However the overall silhouette score is low indicating that the clusters overlap
 
 <figure>
     <p align="center"><img src="/assets/pca_clusters.png" style="width: 75%; height: auto;"></p>
-    <figcaption>*Figure 5: Visualising the Clusters using Two Principal Components*</figcaption>
+    <figcaption>Figure 5: Visualising the Clusters using Two Principal Components</figcaption>
 </figure>
 </br>
 </br>
@@ -153,7 +153,7 @@ The separation of the clusters can be visualised more clearly in [Figure 6](asse
 </p>
 
 <p align="center">
-  <figcaption>*Figure 6: Visualising the Clusters using Three Principal Components*</figcaption>
+  <figcaption>Figure 6: Visualising the Clusters using Three Principal Components</figcaption>
 </p>
 
 ### Cluster Analysis:
@@ -287,14 +287,14 @@ See a more detailed breakdown of the categorical and continuous variable distrib
 
 <figure>
     <p align="center"><img src="/assets/cluster_cont.png" style="width: 100%; height: auto;"></p>
-    <figcaption>*Figure 7: Distribution of Continuous Variables per Cluster*</figcaption>
+    <figcaption>Figure 7: Distribution of Continuous Variables per Cluster</figcaption>
 </figure>
 </br>
 </br>
 
 <figure>
     <p align="center"><img src="/assets/cluster_cat_breakdown.png" style="width: 100%; height: auto;"></p>
-    <figcaption>*Figure 8: Distribution of Categorical Variables per Cluster*</figcaption>
+    <figcaption>Figure 8: Distribution of Categorical Variables per Cluster</figcaption>
 </figure>
 </br>
 </br>
